@@ -1,3 +1,42 @@
+body {
+    background: #181824;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+#todo-list_app {
+    padding: 4em 0 0;
+    width: 940px;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.task-list {
+    margin: 0 18em 2em;
+    background: #24273d;
+}
+
+.add-task_field {
+    background: #24273d;
+    margin: 2em 18em;
+}
+
+.add-task {
+    padding: 10px 0px;
+    width: 100%;
+}
+
+.list-of-tasks li {
+    background: #24273d;
+    text-align: justify;
+    margin: 1em 0;
+}
+
+.navbar {
+    background: #24273d;
+}
+
 .attribution {
     font-size: 11px; text-align: center;
 }

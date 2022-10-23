@@ -10,24 +10,35 @@
 
   <link rel="stylesheet" href="reset.css">
   <link rel="stylesheet" href="style.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
-  <section id="todo-list">
-    <div>
-      <div id="add-task_field">
+  <section id="todo-list_section">
+    <div id="todo-list_app">
+      <div class="add-task_field">
         <input type="text" value="Add a task" class="add-task" placeholder="Add a task">
       </div>
-      <div id="task-list">
-        <ul class="list-of-tasks">
 
+      <div class="task-list">
+        <ul class="list-of-tasks">
+          <li>Complete Online JavaScript course</li>
+          <li>Jog around the park 3x</li>
+          <li>10 minutes meditation</li>
+          <li>Read for 1 hour</li>
+          <li>Pick up groceries</li>
+          <li>Complete Todo App on Frontend Mentor</li>
         </ul>
 
-        <div>
-          <p># items left</p><button>All</button><button>Active</button><button>Completed</button><button>Clear Completed</button>
-        </div>
+        <nav class="navbar">
+          <button># items left</button><button>All</button><button>Active</button><button>Completed</button><button>Clear Completed</button>
+        </nav>
       </div>
-      <p>Drag and drop to reorder list</p>
+
+      <div class="instruction">
+        <p>Drag and drop to reorder list</p>
+      </div>
     </div>
   </section>
 
