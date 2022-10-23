@@ -1,40 +1,99 @@
 body {
     background: #181824;
     font-family: 'Josefin Sans', sans-serif;
+    font-size: 18px;
+}
+
+.bg-image-dark {
+    width: 100%;
+    position: fixed;
+    z-index: -1;
 }
 
 #todo-list_app {
     padding: 4em 0 0;
-    width: 940px;
+    width: 480px;
     margin: 0 auto;
     text-align: center;
     display: flex;
     flex-flow: column nowrap;
 }
 
+.top-elements {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+
+h1 {
+    font-size: 25px;
+    font-weight: 700;
+    color: #FFFFFF;
+    text-align: left;
+}
+
+.theme {
+    width: 25px;
+}
+
 .task-list {
-    margin: 0 18em 2em;
+    margin: 0 0 2em;
     background: #24273d;
+    border-radius: 5px;
 }
 
 .add-task_field {
-    background: #24273d;
-    margin: 2em 18em;
+    margin: 2em 0 2em;
 }
 
 .add-task {
-    padding: 10px 0px;
+    background: #24273d;
+    padding: 1em 0;
     width: 100%;
+    font-family: 'Josefin Sans';
+    font-size: 18px;
+    color: #b1b1b1;
+    border-radius: 5px;
+    border: none;
 }
 
-.list-of-tasks li {
-    background: #24273d;
+.list-of-tasks {
+    text-align: center;
+}
+
+.task-item {
     text-align: justify;
-    margin: 1em 0;
+    padding: 1em 0;
+    border-bottom: 1px solid #b1b1b1;
+    color: #b1b1b1;
+}
+
+.checkbox {
+    border: none;
+    background: none;
 }
 
 .navbar {
-    background: #24273d;
+    padding: 1em 0;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+}
+
+.navbar button {
+    background: none;
+    border: none;
+    font-family: 'Josefin Sans';
+    color: #b1b1b1;
+}
+
+.nav2 button {
+    margin: 0 0.2em;
+}
+
+.instruction {
+    margin: 0 0 2em;
+    color: #b1b1b1;
 }
 
 .attribution {

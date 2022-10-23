@@ -15,30 +15,43 @@
 </head>
 
 <body>
-  <section id="todo-list_section">
-    <div id="todo-list_app">
-      <div class="add-task_field">
-        <input type="text" value="Add a task" class="add-task" placeholder="Add a task">
-      </div>
+  <img src="images/bg-desktop-dark.jpg" alt="Mountains Background Image" class="bg-image-dark">
+  <section id="todo-list_app">
 
-      <div class="task-list">
-        <ul class="list-of-tasks">
-          <li>Complete Online JavaScript course</li>
-          <li>Jog around the park 3x</li>
-          <li>10 minutes meditation</li>
-          <li>Read for 1 hour</li>
-          <li>Pick up groceries</li>
-          <li>Complete Todo App on Frontend Mentor</li>
-        </ul>
+    <div class="top-elements">
+      <h1>T O D O</h1>
+      <img src="images/sun-white.png" alt="Sun Icon" class="theme">
+    </div>
 
-        <nav class="navbar">
-          <button># items left</button><button>All</button><button>Active</button><button>Completed</button><button>Clear Completed</button>
-        </nav>
-      </div>
+    <div class="add-task_field">
+      <input type="text" class="add-task" placeholder="  Add a task">
+    </div>
 
-      <div class="instruction">
-        <p>Drag and drop to reorder list</p>
-      </div>
+    <div class="task-list">
+      <ul class="list-of-tasks">
+        <li class="task-item"><input type="checkbox" class="checkbox">Complete Online JavaScript course</li>
+        <li class="task-item"><input type="checkbox" class="checkbox">Jog around the park 3x</li>
+        <li class="task-item"><input type="checkbox" class="checkbox">10 minutes meditation</li>
+        <li class="task-item"><input type="checkbox" class="checkbox">Read for 1 hour</li>
+        <li class="task-item"><input type="checkbox" class="checkbox">Pick up groceries</li>
+        <li class="task-item"><input type="checkbox" class="checkbox">Complete Todo App on Frontend Mentor</li>
+      </ul>
+
+      <nav class="navbar">
+        <div class="nav1">
+          <button># items left</button>
+        </div>
+        <div class="nav2">
+          <button>All</button><button>Active</button><button>Completed</button>
+        </div>
+        <div class="nav3">
+          <button>Clear Completed</button>
+        </div>
+      </nav>
+    </div>
+
+    <div class="instruction">
+      <p>Drag and drop to reorder list</p>
     </div>
   </section>
 
