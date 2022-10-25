@@ -90,15 +90,21 @@ h1 {
 }
 
 .list-of-tasks li {
-    text-align: justify;
     padding: 1em 0;
     border-bottom: 1px solid #b1b1b1;
     color: #b1b1b1;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
 }
 
-.checkbox {
+#checkbox {
     border: none;
     background: none;
+}
+
+#close {
+    
 }
 
 .navbar {
