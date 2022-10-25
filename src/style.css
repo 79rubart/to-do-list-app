@@ -44,24 +44,52 @@ h1 {
 
 .add-task_field {
     margin: 2em 0 2em;
+    width: 100%;
+    border-radius: 5px;
+    background: #24273d;
 }
 
-.add-task {
-    background: #24273d;
+#add-task {
+    background: none;
+    width: 80%;
     padding: 1em 0;
-    width: 100%;
     font-family: 'Josefin Sans';
     font-size: 18px;
     color: #b1b1b1;
-    border-radius: 5px;
     border: none;
+}
+
+#submit {
+    background: none;
+    width: 20%;
+    padding: 1em 0;
+    font-family: 'Josefin Sans';
+    font-size: 18px;
+    color: #b1b1b1;
+    border-left: 1px solid #b1b1b1;
+    border-bottom: none;
+    border-right: none;
+    border-top: none;
+}
+
+#submit:hover {
+    background-color: blue;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    cursor: pointer;
+}
+
+#submit:active {
+    background-color: aqua;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
 }
 
 .list-of-tasks {
     text-align: center;
 }
 
-.task-item {
+.list-of-tasks li {
     text-align: justify;
     padding: 1em 0;
     border-bottom: 1px solid #b1b1b1;
@@ -102,4 +130,10 @@ h1 {
 
 .attribution a {
     color: hsl(228, 45%, 44%);
+}
+
+/* onclick styles */
+
+.line-through-item {
+    text-decoration: line-through;
 }
