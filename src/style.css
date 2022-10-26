@@ -89,13 +89,18 @@ h1 {
     text-align: center;
 }
 
-.list-of-tasks li {
+#task-item {
     padding: 1em 0;
     border-bottom: 1px solid #b1b1b1;
     color: #b1b1b1;
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
+    cursor: move;
+}
+
+#task-item.over {
+    opacity: 0.4;
 }
 
 #checkbox {
