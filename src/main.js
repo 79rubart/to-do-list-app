@@ -5,6 +5,7 @@ const allBtn = document.querySelector('.all');
 const activeBtn = document.querySelector('.active');
 const completedBtn = document.querySelector('.completed');
 const clearBtn = document.querySelector('.clear');
+const itemsLeft = document.querySelector('.items-left');
 
 function addListItem(){
     if (addInput.value === ''){
@@ -16,12 +17,13 @@ function addListItem(){
         const label = document.createElement('label');
         const close = document.createElement('input');
 
-        li.className = "task-item"
+        li.className = "task-item";
         checkbox.type = "checkbox";
         checkbox.id = "checkbox";
         label.id = "task-name";
         close.type = "button";
         close.id = "close";
+        close.value = "X";
 
         li.draggable = "true";
         label.innerHTML = addInput.value;
@@ -31,16 +33,21 @@ function addListItem(){
         li.appendChild(label);
         li.appendChild(close);
 
+        liArray = [li];
+        itemsLeft.value = liArray.length;
 
+        if(itemsLeft.value >= 1){
+            itemsLeft.value + 1;
+        }
         
-        checkbox.addEventListener('change', function chkBox(event){
+        checkbox.addEventListener('change', function (event){
             if (event.currentTarget.checked) {
-                li.style.textDecoration = "line-through";
+                label.style.textDecoration = "line-through";
             } else {
                 function unchecked(){
                     event.preventDefault();
                 }
-                li.style.textDecoration = "none";
+                label.style.textDecoration = "none";
             }
 
             activeBtn.addEventListener('click', function(){
@@ -67,7 +74,7 @@ function addListItem(){
                 }
             });
 
-            clearBtn.addEventListener('click', function(){
+            clearBtn.addEventListener('click', function(event){
                 if (event.currentTarget.checked){
                     li.remove();
                 }

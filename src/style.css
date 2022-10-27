@@ -97,16 +97,39 @@ h1 {
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
+    align-items: center;
     cursor: move;
     background: #24273d;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
-
 }
 
 #checkbox {
-    border: none;
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    top: 0;
+    border-radius: 100%;
+}
+
+#close {
     background: none;
+    border: none;
+    font-family: 'Josefin Sans';
+    font-weight: 400;
+    color: #b1b1b1;
+    margin: 0 1em 0 0;
+    font-size: 20px;
+}
+
+#close:hover {
+    color: #FFFFFF;
+    transition: 400ms;
+    cursor: pointer;
+}
+
+#close:active {
+    color: blue;
 }
 
 .navbar {
@@ -124,21 +147,36 @@ h1 {
     border: none;
     font-family: 'Josefin Sans';
     color: #b1b1b1;
-}
-
-.all, .active, .completed {
     font-size: 15px;
     margin: 0 0.2em;
 }
 
-.clear {
-    font-size: 15px;
-}
-
-.all:hover, .active:hover, .completed:hover, .clear:hover {
+.navbar button:hover {
     cursor: pointer;
     color: #FFFFFF;
     transition: 400ms;
+}
+
+.nav1 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 13px;
+}
+
+.items-left {
+    background: none;
+    border: none;
+    font-family: 'Josefin Sans';
+    font-size: 15px;
+    color: #b1b1b1;
+    width: 15px;
+}
+
+.navbar label {
+    font-family: 'Josefin Sans';
+    color: #b1b1b1;
+    font-size: 14px;
 }
 
 .all:active, .active:active, .completed:active, .clear:active {
