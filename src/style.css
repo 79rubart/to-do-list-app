@@ -37,9 +37,9 @@ h1 {
 }
 
 .task-list {
-    margin: 0 0 2em;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
     background: #24273d;
-    border-radius: 5px;
 }
 
 .add-task_field {
@@ -73,10 +73,11 @@ h1 {
 }
 
 #submit:hover {
-    background-color: blue;
+    background-color: darkblue;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
     cursor: pointer;
+    transition: 400ms;
 }
 
 #submit:active {
@@ -89,7 +90,7 @@ h1 {
     text-align: center;
 }
 
-#task-item {
+.task-item {
     padding: 1em 0;
     border-bottom: 1px solid #b1b1b1;
     color: #b1b1b1;
@@ -97,10 +98,10 @@ h1 {
     flex-flow: row nowrap;
     justify-content: space-between;
     cursor: move;
-}
+    background: #24273d;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
 
-#task-item.over {
-    opacity: 0.4;
 }
 
 #checkbox {
@@ -108,15 +109,14 @@ h1 {
     background: none;
 }
 
-#close {
-    
-}
-
 .navbar {
     padding: 1em 0;
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-around;
+    background: #24273d;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
 }
 
 .navbar button {
@@ -126,12 +126,28 @@ h1 {
     color: #b1b1b1;
 }
 
-.nav2 button {
+.all, .active, .completed {
+    font-size: 15px;
     margin: 0 0.2em;
 }
 
+.clear {
+    font-size: 15px;
+}
+
+.all:hover, .active:hover, .completed:hover, .clear:hover {
+    cursor: pointer;
+    color: #FFFFFF;
+    transition: 400ms;
+}
+
+.all:active, .active:active, .completed:active, .clear:active {
+    color: blue;
+    transition: 0ms;
+}
+
 .instruction {
-    margin: 0 0 2em;
+    margin: 2em 0;
     color: #b1b1b1;
 }
 

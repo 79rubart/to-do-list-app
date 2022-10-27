@@ -1,6 +1,10 @@
 const addInput = document.querySelector('#add-task');
 const addBtn = document.querySelector('#submit');
 const divList = document.querySelector('.task-list');
+const allBtn = document.querySelector('.all');
+const activeBtn = document.querySelector('.active');
+const completedBtn = document.querySelector('.completed');
+const clearBtn = document.querySelector('.clear');
 
 function addListItem(){
     if (addInput.value === ''){
@@ -12,7 +16,7 @@ function addListItem(){
         const label = document.createElement('label');
         const close = document.createElement('input');
 
-        li.id = "task-item"
+        li.className = "task-item"
         checkbox.type = "checkbox";
         checkbox.id = "checkbox";
         label.id = "task-name";
@@ -27,12 +31,47 @@ function addListItem(){
         li.appendChild(label);
         li.appendChild(close);
 
-        checkbox.addEventListener('change', function(event) {
-            if (event.currentTarget.checked){
-                label.style.textDecoration="line-through";
+
+        
+        checkbox.addEventListener('change', function chkBox(event){
+            if (event.currentTarget.checked) {
+                li.style.textDecoration = "line-through";
             } else {
-                label.style.textDecoration="none";
+                function unchecked(){
+                    event.preventDefault();
+                }
+                li.style.textDecoration = "none";
             }
+
+            activeBtn.addEventListener('click', function(){
+                if (unchecked){
+                    li.style.display = "flex";
+                } else {
+                    li.style.display = "none";
+                }
+            });
+
+            allBtn.addEventListener('click', function(){
+                if (unchecked){
+                    li.style.display = "flex"
+                } else {
+                    li.style.display = "flex";
+                }
+            });
+            
+            completedBtn.addEventListener('click', function(){
+                if (unchecked){
+                    li.style.display = "none";
+                } else {
+                    li.style.display = "flex";
+                }
+            });
+
+            clearBtn.addEventListener('click', function(){
+                if (event.currentTarget.checked){
+                    li.remove();
+                }
+            });
         });
 
         close.addEventListener('click', function(){
