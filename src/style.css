@@ -4,7 +4,7 @@ body {
     font-size: 18px;
 }
 
-.bg-image-dark {
+.bg-image {
     width: 100%;
     position: fixed;
     z-index: -1;
@@ -26,12 +26,6 @@ body {
     align-items: center;
 }
 
-.top-elements button {
-    background: none;
-    border: none;
-    cursor: pointer;
-}
-
 h1 {
     font-size: 25px;
     font-weight: 700;
@@ -39,7 +33,10 @@ h1 {
     text-align: left;
 }
 
-.theme {
+#icon {
+    background: none;
+    border: none;
+    cursor: pointer;
     width: 25px;
 }
 
@@ -109,6 +106,7 @@ h1 {
     background: #24273d;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
+    box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.3);
 }
 
 #checkbox {
@@ -147,6 +145,7 @@ h1 {
     background: #24273d;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
+    box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.3);
 }
 
 .all, .active, .completed, .clear {
@@ -188,27 +187,18 @@ h1 {
     width: 15px;
 }
 
-.navbar label {
-    font-family: 'Josefin Sans';
-    color: #b1b1b1;
-    font-size: 14px;
-}
-
 .instruction {
     margin: 2em 0;
     color: #b1b1b1;
 }
 
-.attribution {
-    font-size: 11px; text-align: center;
-}
+@media screen and (max-width: 480px) {
+    #todo-list_app {
+        width: auto;
+        padding: 2em 1em;
+    }
 
-.attribution a {
-    color: hsl(228, 45%, 44%);
-}
-
-/* onclick styles */
-
-.line-through-item {
-    text-decoration: line-through;
+    .all, .active, .completed, .clear {
+        font-size: 13px;
+    }    
 }

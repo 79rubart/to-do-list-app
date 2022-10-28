@@ -5,7 +5,6 @@ const allBtn = document.querySelector('.all');
 const activeBtn = document.querySelector('.active');
 const completedBtn = document.querySelector('.completed');
 const clearBtn = document.querySelector('.clear');
-const itemsLeft = document.querySelector('.items-left');
 
 function addListItem(){
     if (addInput.value === ''){
@@ -24,9 +23,7 @@ function addListItem(){
         close.type = "button";
         close.id = "close";
         close.value = "X";
-        itemsLeft.value = "0";
 
-        li.draggable = "true";
         label.innerHTML = addInput.value;
         addInput.value = '';
         ul.appendChild(li);
@@ -108,12 +105,11 @@ function addListItem(){
 addBtn.addEventListener('click', function() {
     addListItem();
     $(activeBtn).click();
-
 });
 
 addInput.addEventListener('keyup', function(event) {
     if(event.which === 13) {
         addListItem();
-        clickActiveBtn();
+        $(activeBtn).click();
     }
 });

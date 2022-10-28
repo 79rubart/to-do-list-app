@@ -1,0 +1,216 @@
+body {
+    background: #fafafa;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 18px;
+}
+
+.bg-image { 
+    width: 100%;
+    position: fixed;
+    z-index: -1;
+}
+
+#todo-list_app {
+    padding: 4em 0 0;
+    width: 480px;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.top-elements {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.theme {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+h1 {
+    font-size: 25px;
+    font-weight: 700;
+    color: #FFFFFF;
+    text-align: left;
+}
+
+.theme-img {
+    width: 25px;
+}
+
+.task-list {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    background: #ffffff;
+}
+
+.add-task_field {
+    margin: 2em 0 2em;
+    width: 100%;
+    border-radius: 5px;
+    background: #ffffff;
+}
+
+#add-task {
+    background: none;
+    width: 80%;
+    padding: 1em 0;
+    font-family: 'Josefin Sans';
+    font-size: 18px;
+    color: #393840;
+    border: none;
+}
+
+#submit {
+    background: none;
+    width: 20%;
+    padding: 1em 0;
+    font-family: 'Josefin Sans';
+    font-size: 18px;
+    color: #393840;
+    border-left: 1px solid #393840;
+    border-bottom: none;
+    border-right: none;
+    border-top: none;
+}
+
+#submit:hover {
+    background-color: aqua;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    cursor: pointer;
+    transition: 400ms;
+}
+
+#submit:active {
+    background-color: darkblue;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.list-of-tasks {
+    text-align: center;
+}
+
+.task-item {
+    padding: 1em 0;
+    border-bottom: 1px solid #5f5f5f;
+    color: #5f5f5f;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    cursor: move;
+    background: #ffffff;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    box-shadow: 10px 10px 20px 0px rgb(73 75 89 / 30%);
+}
+
+#checkbox {
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    top: 0;
+    border-radius: 100%;
+}
+
+#close {
+    background: none;
+    border: none;
+    font-family: 'Josefin Sans';
+    font-weight: 400;
+    color: #393840;
+    margin: 0 1em 0 0;
+    font-size: 20px;
+}
+
+#close:hover {
+    color: #000000;
+    transition: 400ms;
+    cursor: pointer;
+}
+
+#close:active {
+    color: #6496ea;
+}
+
+.navbar {
+    padding: 1em 0;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    background: #ffffff;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    box-shadow: 10px 10px 20px 0px rgb(73 75 89 / 30%);
+}
+
+.all, .active, .completed, .clear {
+    background: none;
+    border: none;
+    font-family: 'Josefin Sans';
+    color: #393840;
+    font-size: 15px;
+    margin: 0 0.2em;
+}
+
+.all:hover, .active:hover, .completed:hover, .clear:hover {
+    cursor: pointer;
+    color: #000000;
+    transition: 400ms;
+}
+
+.all:active, .active:active, .completed:active, .clear:active {
+    color: #6496ea;
+}
+
+.all:focus, .active:focus, .completed:focus {
+    color: #6496ea;
+}
+
+.nav1 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 13px;
+}
+
+.items-left {
+    background: none;
+    border: none;
+    font-family: 'Josefin Sans';
+    font-size: 15px;
+    color: #393840;
+    width: 15px;
+}
+
+.navbar label {
+    font-family: 'Josefin Sans';
+    color: #393840;
+    font-size: 14px;
+}
+
+.instruction {
+    margin: 2em 0;
+    color: #393840;
+}
+
+.attribution {
+    font-size: 11px; text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+/* onclick styles */
+
+.line-through-item {
+    text-decoration: line-through;
+}
