@@ -23,6 +23,13 @@ body {
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
+    align-items: center;
+}
+
+.top-elements button {
+    background: none;
+    border: none;
+    cursor: pointer;
 }
 
 h1 {
@@ -142,7 +149,7 @@ h1 {
     border-bottom-right-radius: 5px;
 }
 
-.navbar button {
+.all, .active, .completed, .clear {
     background: none;
     border: none;
     font-family: 'Josefin Sans';
@@ -151,10 +158,18 @@ h1 {
     margin: 0 0.2em;
 }
 
-.navbar button:hover {
+.all:hover, .active:hover, .completed:hover, .clear:hover {
     cursor: pointer;
     color: #FFFFFF;
     transition: 400ms;
+}
+
+.all:active, .active:active, .completed:active, .clear:active {
+    color: blue;
+}
+
+.all:focus, .active:focus, .completed:focus {
+    color: blue;
 }
 
 .nav1 {
@@ -177,11 +192,6 @@ h1 {
     font-family: 'Josefin Sans';
     color: #b1b1b1;
     font-size: 14px;
-}
-
-.all:active, .active:active, .completed:active, .clear:active {
-    color: blue;
-    transition: 0ms;
 }
 
 .instruction {

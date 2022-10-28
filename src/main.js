@@ -24,6 +24,7 @@ function addListItem(){
         close.type = "button";
         close.id = "close";
         close.value = "X";
+        itemsLeft.value = "0";
 
         li.draggable = "true";
         label.innerHTML = addInput.value;
@@ -33,52 +34,64 @@ function addListItem(){
         li.appendChild(label);
         li.appendChild(close);
 
-        liArray = [li];
-        itemsLeft.value = liArray.length;
+        var unchecked = true;
 
-        if(itemsLeft.value >= 1){
-            itemsLeft.value + 1;
-        }
-        
-        checkbox.addEventListener('change', function (event){
+        function check(event){
             if (event.currentTarget.checked) {
                 label.style.textDecoration = "line-through";
+                unchecked = false;
             } else {
-                function unchecked(){
-                    event.preventDefault();
-                }
                 label.style.textDecoration = "none";
+                unchecked = true;
             }
+        }
 
-            activeBtn.addEventListener('click', function(){
-                if (unchecked){
-                    li.style.display = "flex";
-                } else {
-                    li.style.display = "none";
-                }
-            });
+        checkbox.addEventListener('change', function (event){
+            check(event);
+        });
+        
+        activeBtn.addEventListener('click', function(){
+            console.log(unchecked)
+            if (unchecked){
+                li.style.display = "flex";
+            } else {
+                li.style.display = "none";
+            }
+            allBtn.setAttribute('style','color:#b1b1b1');
+            activeBtn.setAttribute('style','color:blue');
+            completedBtn.setAttribute('style','color:#b1b1b1');
+        });
 
-            allBtn.addEventListener('click', function(){
-                if (unchecked){
-                    li.style.display = "flex"
-                } else {
-                    li.style.display = "flex";
-                }
-            });
-            
-            completedBtn.addEventListener('click', function(){
-                if (unchecked){
-                    li.style.display = "none";
-                } else {
-                    li.style.display = "flex";
-                }
-            });
+        allBtn.addEventListener('click', function(){
+            console.log(unchecked)
+            if (unchecked){
+                li.style.display = "flex"
+            } else {
+                li.style.display = "flex";
+            }
+            allBtn.setAttribute('style','color:blue');
+            activeBtn.setAttribute('style','color:#b1b1b1');
+            completedBtn.setAttribute('style','color:#b1b1b1');
+        });
 
-            clearBtn.addEventListener('click', function(event){
-                if (event.currentTarget.checked){
-                    li.remove();
-                }
-            });
+        completedBtn.addEventListener('click', function(){
+            console.log(unchecked)
+            if (unchecked){
+                li.style.display = "none";
+            } else {
+                li.style.display = "flex";
+            }
+            allBtn.setAttribute('style','color:#b1b1b1');
+            activeBtn.setAttribute('style','color:#b1b1b1');
+            completedBtn.setAttribute('style','color:blue');
+        });
+
+        clearBtn.addEventListener('click', function(){
+            if (unchecked){
+                li.style.display = "flex";
+            } else {
+                $(close).click();
+            }
         });
 
         close.addEventListener('click', function(){
@@ -94,10 +107,13 @@ function addListItem(){
 
 addBtn.addEventListener('click', function() {
     addListItem();
+    $(activeBtn).click();
+
 });
 
 addInput.addEventListener('keyup', function(event) {
     if(event.which === 13) {
         addListItem();
+        clickActiveBtn();
     }
 });
