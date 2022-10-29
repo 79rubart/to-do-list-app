@@ -24,13 +24,19 @@ The users should be able to:
 
 ## Tools I used
 
-- Microsoft Visual Studio Code.
+- Microsoft Visual Studio Code
+- Git/Github
+- Vercel
 
 ## Languages used
 
-- HTML;
-- CSS;
-- JavaScript;
+- HTML
+- CSS
+- JavaScript
+
+## Deployment Link
+
+https://to-do-list-app-1.vercel.app/
 
 ## Referred Assets
 
