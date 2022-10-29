@@ -42,4 +42,4 @@ https://to-do-list-app-1.vercel.app/
 
 The task was to build out the project to the designs inside the `/design` folder. There is both a mobile and a desktop version of the design. 
 
-All the required assets for the challenge are in the `/images` folder, except for "project-ready-desktop.png" and "project-ready-mobile.PNG", these last images are finalized project.
+All the required assets for the challenge are in the `/images` folder.
