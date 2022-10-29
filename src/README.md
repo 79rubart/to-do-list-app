@@ -1,7 +1,7 @@
 # To Do List App Challenge
 
-![alt text](https://github.com/79rubart/to-do-list-app/blob/master/desktop.png)
-![alt text](https://github.com/79rubart/to-do-list-app/blob/master/mobile.png)
+[Desktop Preview Image](https://github.com/79rubart/to-do-list-app/blob/master/desktop.PNG)
+[Mobile Preview Image](https://github.com/79rubart/to-do-list-app/blob/master/mobile.PNG)
 
 ## About the Project
 
